@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000428, #004e92);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out, float 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            width: 50px;
+            height: 5px;
+            background: #00d4ff;
+            animation: slide 2s infinite;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 30px;
+            animation: fadeIn 2s ease-in-out 1.5s;
+        }
+
+        video {
+            width: 100%;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+
+        footer {
+            position: relative;
+            bottom: 20px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 30px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes slide {
+            0% {
+                width: 0;
+                background: #004e92;
+            }
+            50% {
+                width: 50px;
+                background: #00d4ff;
+            }
+            100% {
+                width: 0;
+                background: #004e92;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kommt bald</h1>
+        <p>Etwas Cooles kommt bald. Bleiben Sie dran!</p>
+        <div class="video-container">
+            <video src="/1.mp4" controls></video>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Iyed@Mejri
+    </footer>
+</body>
+</html>
