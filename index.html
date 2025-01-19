@@ -7,7 +7,6 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
             font-family: 'Arial', sans-serif;
             color: white;
             overflow: hidden;
@@ -33,7 +32,6 @@
             align-items: center;
             height: 100vh;
             text-align: center;
-            padding: 0 20px;
             position: relative;
             z-index: 1;
         }
@@ -43,24 +41,25 @@
             margin: 0;
             animation: fadeIn 2s ease-in-out, float 3s ease-in-out infinite;
             position: relative;
+            color: #00d4ff;
+            text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff;
         }
 
-        h1::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -10px;
-            width: 50px;
-            height: 5px;
-            background: #00d4ff;
-            animation: slide 2s infinite;
+        h1 .dots {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 4rem;
+            animation: loadingDots 1.5s infinite;
+            color: #00d4ff;
+            text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff;
         }
 
         p {
             font-size: 1.5rem;
             margin: 20px 0;
             animation: fadeIn 2s ease-in-out 1s;
+            color: #00d4ff;
+            text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff;
         }
 
         .video-container {
@@ -105,18 +104,18 @@
             }
         }
 
-        @keyframes slide {
+        @keyframes loadingDots {
             0% {
-                width: 0;
-                background: #004e92;
+                content: '';
             }
-            50% {
-                width: 50px;
-                background: #00d4ff;
+            33% {
+                content: '.';
+            }
+            66% {
+                content: '..';
             }
             100% {
-                width: 0;
-                background: #004e92;
+                content: '...';
             }
         }
     </style>
@@ -130,7 +129,7 @@
 
     <!-- Main Content -->
     <div class="container">
-        <h1>Kommt bald</h1>
+        <h1>Kommt bald<span class="dots">...</span></h1>
         <p>Etwas Cooles kommt bald. Bleiben Sie dran!</p>
         <div class="video-container">
             <video controls>
