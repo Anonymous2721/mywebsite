@@ -8,10 +8,22 @@
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #000428, #004e92);
             font-family: 'Arial', sans-serif;
             color: white;
             overflow: hidden;
+            position: relative;
+        }
+
+        /* Fullscreen video background */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: blur(8px);
         }
 
         .container {
@@ -22,6 +34,8 @@
             height: 100vh;
             text-align: center;
             padding: 0 20px;
+            position: relative;
+            z-index: 1;
         }
 
         h1 {
@@ -108,15 +122,23 @@
     </style>
 </head>
 <body>
+    <!-- Background Video -->
+    <video class="background-video" autoplay muted loop>
+        <source src="1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Main Content -->
     <div class="container">
         <h1>Kommt bald</h1>
         <p>Etwas Cooles kommt bald. Bleiben Sie dran!</p>
         <div class="video-container">
-            <video width="320" height="240" controls>
+            <video controls>
                 <source src="1.mp4" type="video/mp4">
             </video>
         </div>
     </div>
+
     <footer>
         &copy; 2025 Iyed@Mejri
     </footer>
