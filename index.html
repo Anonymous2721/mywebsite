@@ -1,138 +1,28 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            color: white;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* Fullscreen video background */
-        .background-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-            filter: blur(8px) brightness(0.7);
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        h1 {
-            font-size: 4rem;
-            margin: 0;
-            animation: fadeIn 2s ease-in-out, float 3s ease-in-out infinite;
-            color: rgba(255, 255, 255, 0.9);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-        }
-
-        h1 .dots {
-            display: inline-block;
-            margin-left: 10px;
-            font-size: 4rem;
-            animation: loadingDots 1.5s infinite;
-            color: rgba(255, 255, 255, 0.9);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-        }
-
-        p {
-            font-size: 1.5rem;
-            margin: 20px 0;
-            animation: fadeIn 2s ease-in-out 1s;
-            color: rgba(255, 255, 255, 0.8);
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            overflow: hidden;
-            border-radius: 10px;
-            margin-top: 30px;
-            animation: fadeIn 2s ease-in-out 1.5s;
-        }
-
-        video {
-            width: 100%;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        footer {
-            position: relative;
-            bottom: 20px;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-top: 30px;
-            animation: fadeIn 2s ease-in-out 2s;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes loadingDots {
-            0% { content: ''; }
-            33% { content: '.'; }
-            66% { content: '..'; }
-            100% { content: '...'; }
-        }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Background Video -->
-    <video class="background-video" autoplay muted loop>
-        <source src="1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div class="content">
+        <button class="btn">
+            <a href="1.html">Erste Tag</a>
+        </button>
 
-    <!-- Main Content -->
-    <div class="container">
-        <h1>Kommt bald<span class="dots">...</span></h1>
-        <p>Etwas Cooles kommt bald. Bleiben Sie dran!</p>
-        <div class="video-container">
-            <video controls>
-                <source src="1.mp4" type="video/mp4">
-            </video>
-        </div>
+        <button class="btn">
+            <a href="2.html">Zweite Tag</a>
+        </button>
+
+        <button class="btn">
+            <a href="3.html">Dreite Tag</a>
+        </button>
+
+        <button class="btn">
+            <a href="4.html">Vierte Tag</a>
+        </button>
     </div>
-
-    <footer>
-        &copy; 2025 Iyed@Mejri
-    </footer>
 </body>
 </html>
